@@ -255,8 +255,8 @@ def useast1():
         for row in csvreader:
             # Provide a title for each row.
             bucket = row[0]
-            KMS_Key_dirty = row[1]
-            KMS_Key = KMS_Key_dirty[1:]
+            KMS_Key_modify = row[1]
+            KMS_Key = KMS_Key_modify[1:]
             try:
                 response = kms.describe_key(KeyId=KMS_Key)
                 key_type = response['KeyMetadata']['KeyManager']
@@ -279,8 +279,8 @@ def useast2():
         for row in csvreader:
             # Provide a title for each row.
             bucket = row[0]
-            KMS_Key_dirty = row[1]
-            KMS_Key = KMS_Key_dirty[1:]
+            KMS_Key_modify = row[1]
+            KMS_Key = KMS_Key_modify[1:]
             try:
                 response = kms_use2.describe_key(KeyId=KMS_Key)
                 key_type = response['KeyMetadata']['KeyManager']
@@ -303,8 +303,8 @@ def uswest1():
         for row in csvreader:
             # Provide a title for each row.
             bucket = row[0]
-            KMS_Key_dirty = row[1]
-            KMS_Key = KMS_Key_dirty[1:]
+            KMS_Key_modify = row[1]
+            KMS_Key = KMS_Key_modify[1:]
             try:
                 response = kms_usw2.describe_key(KeyId=KMS_Key)
                 key_type = response['KeyMetadata']['KeyManager']
@@ -327,8 +327,8 @@ def uswest2():
         for row in csvreader:
             # Provide a title for each row.
             bucket = row[0]
-            KMS_Key_dirty = row[1]
-            KMS_Key = KMS_Key_dirty[1:]
+            KMS_Key_modify = row[1]
+            KMS_Key = KMS_Key_modify[1:]
             try:
                 response = kms_usw2.describe_key(KeyId=KMS_Key)
                 key_type = response['KeyMetadata']['KeyManager']
@@ -351,8 +351,8 @@ def afsouth1():
         for row in csvreader:
             # Provide a title for each row.
             bucket = row[0]
-            KMS_Key_dirty = row[1]
-            KMS_Key = KMS_Key_dirty[1:]
+            KMS_Key_modify = row[1]
+            KMS_Key = KMS_Key_modify[1:]
             try:
                 response = kms_usw2.describe_key(KeyId=KMS_Key)
                 key_type = response['KeyMetadata']['KeyManager']
@@ -375,8 +375,8 @@ def apeast1():
         for row in csvreader:
             # Provide a title for each row.
             bucket = row[0]
-            KMS_Key_dirty = row[1]
-            KMS_Key = KMS_Key_dirty[1:]
+            KMS_Key_modify = row[1]
+            KMS_Key = KMS_Key_modify[1:]
             try:
                 response = kms_usw2.describe_key(KeyId=KMS_Key)
                 key_type = response['KeyMetadata']['KeyManager']
@@ -399,8 +399,8 @@ def apsouth1():
         for row in csvreader:
             # Provide a title for each row.
             bucket = row[0]
-            KMS_Key_dirty = row[1]
-            KMS_Key = KMS_Key_dirty[1:]
+            KMS_Key_modify = row[1]
+            KMS_Key = KMS_Key_modify[1:]
             try:
                 response = kms_usw2.describe_key(KeyId=KMS_Key)
                 key_type = response['KeyMetadata']['KeyManager']
@@ -423,8 +423,8 @@ def apnortheast1():
         for row in csvreader:
             # Provide a title for each row.
             bucket = row[0]
-            KMS_Key_dirty = row[1]
-            KMS_Key = KMS_Key_dirty[1:]
+            KMS_Key_modify = row[1]
+            KMS_Key = KMS_Key_modify[1:]
             try:
                 response = kms_usw2.describe_key(KeyId=KMS_Key)
                 key_type = response['KeyMetadata']['KeyManager']
@@ -447,8 +447,8 @@ def apnortheast2():
         for row in csvreader:
             # Provide a title for each row.
             bucket = row[0]
-            KMS_Key_dirty = row[1]
-            KMS_Key = KMS_Key_dirty[1:]
+            KMS_Key_modify = row[1]
+            KMS_Key = KMS_Key_modify[1:]
             try:
                 response = kms_usw2.describe_key(KeyId=KMS_Key)
                 key_type = response['KeyMetadata']['KeyManager']
@@ -471,8 +471,8 @@ def apnortheast3():
         for row in csvreader:
             # Provide a title for each row.
             bucket = row[0]
-            KMS_Key_dirty = row[1]
-            KMS_Key = KMS_Key_dirty[1:]
+            KMS_Key_modify = row[1]
+            KMS_Key = KMS_Key_modify[1:]
             try:
                 response = kms_usw2.describe_key(KeyId=KMS_Key)
                 key_type = response['KeyMetadata']['KeyManager']
@@ -495,8 +495,8 @@ def apsoutheast1():
         for row in csvreader:
             # Provide a title for each row.
             bucket = row[0]
-            KMS_Key_dirty = row[1]
-            KMS_Key = KMS_Key_dirty[1:]
+            KMS_Key_modify = row[1]
+            KMS_Key = KMS_Key_modify[1:]
             try:
                 response = kms_usw2.describe_key(KeyId=KMS_Key)
                 key_type = response['KeyMetadata']['KeyManager']
@@ -519,8 +519,8 @@ def apsoutheast2():
         for row in csvreader:
             # Provide a title for each row.
             bucket = row[0]
-            KMS_Key_dirty = row[1]
-            KMS_Key = KMS_Key_dirty[1:]
+            KMS_Key_modify = row[1]
+            KMS_Key = KMS_Key_modify[1:]
             try:
                 response = kms_usw2.describe_key(KeyId=KMS_Key)
                 key_type = response['KeyMetadata']['KeyManager']
@@ -543,8 +543,8 @@ def cacentral1():
         for row in csvreader:
             # Provide a title for each row.
             bucket = row[0]
-            KMS_Key_dirty = row[1]
-            KMS_Key = KMS_Key_dirty[1:]
+            KMS_Key_modify = row[1]
+            KMS_Key = KMS_Key_modify[1:]
             try:
                 response = kms_usw2.describe_key(KeyId=KMS_Key)
                 key_type = response['KeyMetadata']['KeyManager']
@@ -567,8 +567,8 @@ def cnnorth1():
         for row in csvreader:
             # Provide a title for each row.
             bucket = row[0]
-            KMS_Key_dirty = row[1]
-            KMS_Key = KMS_Key_dirty[1:]
+            KMS_Key_modify = row[1]
+            KMS_Key = KMS_Key_modify[1:]
             try:
                 response = kms_usw2.describe_key(KeyId=KMS_Key)
                 key_type = response['KeyMetadata']['KeyManager']
@@ -591,8 +591,8 @@ def cnnorthwest1():
         for row in csvreader:
             # Provide a title for each row.
             bucket = row[0]
-            KMS_Key_dirty = row[1]
-            KMS_Key = KMS_Key_dirty[1:]
+            KMS_Key_modify = row[1]
+            KMS_Key = KMS_Key_modify[1:]
             try:
                 response = kms_usw2.describe_key(KeyId=KMS_Key)
                 key_type = response['KeyMetadata']['KeyManager']
@@ -615,8 +615,8 @@ def eucentral1():
         for row in csvreader:
             # Provide a title for each row.
             bucket = row[0]
-            KMS_Key_dirty = row[1]
-            KMS_Key = KMS_Key_dirty[1:]
+            KMS_Key_modify = row[1]
+            KMS_Key = KMS_Key_modify[1:]
             try:
                 response = kms_usw2.describe_key(KeyId=KMS_Key)
                 key_type = response['KeyMetadata']['KeyManager']
@@ -639,8 +639,8 @@ def euwest1():
         for row in csvreader:
             # Provide a title for each row.
             bucket = row[0]
-            KMS_Key_dirty = row[1]
-            KMS_Key = KMS_Key_dirty[1:]
+            KMS_Key_modify = row[1]
+            KMS_Key = KMS_Key_modify[1:]
             try:
                 response = kms_usw2.describe_key(KeyId=KMS_Key)
                 key_type = response['KeyMetadata']['KeyManager']
@@ -663,8 +663,8 @@ def euwest2():
         for row in csvreader:
             # Provide a title for each row.
             bucket = row[0]
-            KMS_Key_dirty = row[1]
-            KMS_Key = KMS_Key_dirty[1:]
+            KMS_Key_modify = row[1]
+            KMS_Key = KMS_Key_modify[1:]
             try:
                 response = kms_usw2.describe_key(KeyId=KMS_Key)
                 key_type = response['KeyMetadata']['KeyManager']
@@ -687,8 +687,8 @@ def euwest3():
         for row in csvreader:
             # Provide a title for each row.
             bucket = row[0]
-            KMS_Key_dirty = row[1]
-            KMS_Key = KMS_Key_dirty[1:]
+            KMS_Key_modify = row[1]
+            KMS_Key = KMS_Key_modify[1:]
             try:
                 response = kms_usw2.describe_key(KeyId=KMS_Key)
                 key_type = response['KeyMetadata']['KeyManager']
@@ -711,8 +711,8 @@ def eusouth1():
         for row in csvreader:
             # Provide a title for each row.
             bucket = row[0]
-            KMS_Key_dirty = row[1]
-            KMS_Key = KMS_Key_dirty[1:]
+            KMS_Key_modify = row[1]
+            KMS_Key = KMS_Key_modify[1:]
             try:
                 response = kms_usw2.describe_key(KeyId=KMS_Key)
                 key_type = response['KeyMetadata']['KeyManager']
@@ -735,8 +735,8 @@ def eunorth1():
         for row in csvreader:
             # Provide a title for each row.
             bucket = row[0]
-            KMS_Key_dirty = row[1]
-            KMS_Key = KMS_Key_dirty[1:]
+            KMS_Key_modify = row[1]
+            KMS_Key = KMS_Key_modify[1:]
             try:
                 response = kms_usw2.describe_key(KeyId=KMS_Key)
                 key_type = response['KeyMetadata']['KeyManager']
@@ -759,8 +759,8 @@ def mesouth1():
         for row in csvreader:
             # Provide a title for each row.
             bucket = row[0]
-            KMS_Key_dirty = row[1]
-            KMS_Key = KMS_Key_dirty[1:]
+            KMS_Key_modify = row[1]
+            KMS_Key = KMS_Key_modify[1:]
             try:
                 response = kms_usw2.describe_key(KeyId=KMS_Key)
                 key_type = response['KeyMetadata']['KeyManager']
@@ -783,8 +783,8 @@ def saeast1():
         for row in csvreader:
             # Provide a title for each row.
             bucket = row[0]
-            KMS_Key_dirty = row[1]
-            KMS_Key = KMS_Key_dirty[1:]
+            KMS_Key_modify = row[1]
+            KMS_Key = KMS_Key_modify[1:]
             try:
                 response = kms_usw2.describe_key(KeyId=KMS_Key)
                 key_type = response['KeyMetadata']['KeyManager']
