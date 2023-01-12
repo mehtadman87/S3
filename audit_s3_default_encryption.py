@@ -7,7 +7,7 @@ import csv
 from re import search
 
 # Define the report output location
-bucketEncryptionReport = 'C:/users/neilmeht/Desktop/bucketEncryptionReport.csv'
+bucketEncryptionReport = 'C:/outputs/bucketEncryptionReport.csv'
 
 # Delete report file if it already exist.
 try:
