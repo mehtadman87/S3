@@ -161,7 +161,6 @@ for bucket in buckets:
     try:
         resp = s3.get_bucket_encryption(Bucket=myBuckets)
         kms_key = resp['ServerSideEncryptionConfiguration']['Rules'][0]['ApplyServerSideEncryptionByDefault']['KMSMasterKeyID']
-        print(myBuckets+', '+kms_key)
         print(myBuckets+', '+kms_key, file=open(KMS_Output, "a"))
         if kms_key.startswith(key_region_use1):
         	print(myBuckets+', '+kms_key, file=open(key_ids_use1, "a"))
