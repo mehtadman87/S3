@@ -11,12 +11,6 @@ from re import search
 # Define the report output location
 bucketEncryptionReport = 'C:/users/neilmeht/Desktop/bucketEncryptionReport_'+time.strftime("%Y%m%d-%H%M%S")+'.csv'
 
-# Delete report file if it already exist.
-try:
-    os.remove(bucketEncryptionReport)
-except:
-    pass
-
 
 # Create function to handle client errors (4xx errors).
 def is_client_error(code):
