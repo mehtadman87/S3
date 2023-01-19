@@ -9,7 +9,7 @@ from re import search
 
 
 # Define the report output location
-bucketEncryptionReport = 'C:/outputs/bucketEncryptionReport_'+time.strftime("%Y%m%d-%H%M%S")+'.csv'
+bucketEncryptionReport = 'C:/users/neilmeht/Desktop/bucketEncryptionReport_'+time.strftime("%Y%m%d-%H%M%S")+'.csv'
 
 
 # Create function to handle client errors (4xx errors).
@@ -285,8 +285,8 @@ def useast1():
                 print(bucket+', '+KMS_Key+', '+key_type+', '+bucketKeyStatus, file=open(bucketEncryptionReport, "a"))
             except is_client_error('AccessDeniedException'):
                 #print(bucket+', AccessDenied, AccessDenied, '+bucketKeyStatus)
-                print(bucket+', AccessDenied, AccessDenied, '+bucketKeyStatus, file=open(Full_NotFound_Report, "a"))
-                print(bucket+', AccessDenied, AccessDenied, '+bucketKeyStatus, file=open(bucketEncryptionReport, "a"))
+                print(bucket+', Cross-Account KMS Key, AccessDenied, '+bucketKeyStatus, file=open(Full_NotFound_Report, "a"))
+                print(bucket+', Cross-Account KMS Key, AccessDenied, '+bucketKeyStatus, file=open(bucketEncryptionReport, "a"))
             except is_client_error('NotFoundException'):
                 #print(bucket+', '+KMS_Key+', '+bucketKeyStatus)
                 print(bucket+', '+KMS_Key+', N/A, '+bucketKeyStatus, file=open(Full_NotFound_Report, "a"))
@@ -315,13 +315,12 @@ def useast2():
                 print(bucket+', '+KMS_Key+', '+key_type+', '+bucketKeyStatus, file=open(bucketEncryptionReport, "a"))
             except is_client_error('AccessDeniedException'):
                 #print(bucket+', AccessDenied, AccessDenied, '+bucketKeyStatus)
-                print(bucket+', AccessDenied, AccessDenied, '+bucketKeyStatus, file=open(Full_NotFound_Report, "a"))
-                print(bucket+', AccessDenied, AccessDenied, '+bucketKeyStatus, file=open(bucketEncryptionReport, "a"))
+                print(bucket+', Cross-Account KMS Key, AccessDenied, '+bucketKeyStatus, file=open(Full_NotFound_Report, "a"))
+                print(bucket+', Cross-Account KMS Key, AccessDenied, '+bucketKeyStatus, file=open(bucketEncryptionReport, "a"))
             except is_client_error('NotFoundException'):
                 #print(bucket+', '+KMS_Key+', '+bucketKeyStatus)
                 print(bucket+', '+KMS_Key+', N/A, '+bucketKeyStatus, file=open(Full_NotFound_Report, "a"))
                 print(bucket+', '+KMS_Key+', N/A, '+bucketKeyStatus, file=open(bucketEncryptionReport, "a"))
-
 
 def uswest1():
     filename = key_ids_usw1
@@ -345,8 +344,8 @@ def uswest1():
                 print(bucket+', '+KMS_Key+', '+key_type+', '+bucketKeyStatus, file=open(bucketEncryptionReport, "a"))
             except is_client_error('AccessDeniedException'):
                 #print(bucket+', AccessDenied, AccessDenied, '+bucketKeyStatus)
-                print(bucket+', AccessDenied, AccessDenied, '+bucketKeyStatus, file=open(Full_NotFound_Report, "a"))
-                print(bucket+', AccessDenied, AccessDenied, '+bucketKeyStatus, file=open(bucketEncryptionReport, "a"))
+                print(bucket+', Cross-Account KMS Key, AccessDenied, '+bucketKeyStatus, file=open(Full_NotFound_Report, "a"))
+                print(bucket+', Cross-Account KMS Key, AccessDenied, '+bucketKeyStatus, file=open(bucketEncryptionReport, "a"))
             except is_client_error('NotFoundException'):
                 #print(bucket+', '+KMS_Key+', '+bucketKeyStatus)
                 print(bucket+', '+KMS_Key+', N/A, '+bucketKeyStatus, file=open(Full_NotFound_Report, "a"))
@@ -375,8 +374,8 @@ def uswest2():
                 print(bucket+', '+KMS_Key+', '+key_type+', '+bucketKeyStatus, file=open(bucketEncryptionReport, "a"))
             except is_client_error('AccessDeniedException'):
                 #print(bucket+', AccessDenied, AccessDenied, '+bucketKeyStatus)
-                print(bucket+', AccessDenied, AccessDenied, '+bucketKeyStatus, file=open(Full_NotFound_Report, "a"))
-                print(bucket+', AccessDenied, AccessDenied, '+bucketKeyStatus, file=open(bucketEncryptionReport, "a"))
+                print(bucket+', Cross-Account KMS Key, AccessDenied, '+bucketKeyStatus, file=open(Full_NotFound_Report, "a"))
+                print(bucket+', Cross-Account KMS Key, AccessDenied, '+bucketKeyStatus, file=open(bucketEncryptionReport, "a"))
             except is_client_error('NotFoundException'):
                 #print(bucket+', '+KMS_Key+', '+bucketKeyStatus)
                 print(bucket+', '+KMS_Key+', N/A, '+bucketKeyStatus, file=open(Full_NotFound_Report, "a"))
@@ -405,8 +404,8 @@ def afsouth1():
                 print(bucket+', '+KMS_Key+', '+key_type+', '+bucketKeyStatus, file=open(bucketEncryptionReport, "a"))
             except is_client_error('AccessDeniedException'):
                 #print(bucket+', AccessDenied, AccessDenied, '+bucketKeyStatus)
-                print(bucket+', AccessDenied, AccessDenied, '+bucketKeyStatus, file=open(Full_NotFound_Report, "a"))
-                print(bucket+', AccessDenied, AccessDenied, '+bucketKeyStatus, file=open(bucketEncryptionReport, "a"))
+                print(bucket+', Cross-Account KMS Key, AccessDenied, '+bucketKeyStatus, file=open(Full_NotFound_Report, "a"))
+                print(bucket+', Cross-Account KMS Key, AccessDenied, '+bucketKeyStatus, file=open(bucketEncryptionReport, "a"))
             except is_client_error('NotFoundException'):
                 #print(bucket+', '+KMS_Key+', '+bucketKeyStatus)
                 print(bucket+', '+KMS_Key+', N/A, '+bucketKeyStatus, file=open(Full_NotFound_Report, "a"))
@@ -435,8 +434,8 @@ def apeast1():
                 print(bucket+', '+KMS_Key+', '+key_type+', '+bucketKeyStatus, file=open(bucketEncryptionReport, "a"))
             except is_client_error('AccessDeniedException'):
                 #print(bucket+', AccessDenied, AccessDenied, '+bucketKeyStatus)
-                print(bucket+', AccessDenied, AccessDenied, '+bucketKeyStatus, file=open(Full_NotFound_Report, "a"))
-                print(bucket+', AccessDenied, AccessDenied, '+bucketKeyStatus, file=open(bucketEncryptionReport, "a"))
+                print(bucket+', Cross-Account KMS Key, AccessDenied, '+bucketKeyStatus, file=open(Full_NotFound_Report, "a"))
+                print(bucket+', Cross-Account KMS Key, AccessDenied, '+bucketKeyStatus, file=open(bucketEncryptionReport, "a"))
             except is_client_error('NotFoundException'):
                 #print(bucket+', '+KMS_Key+', '+bucketKeyStatus)
                 print(bucket+', '+KMS_Key+', N/A, '+bucketKeyStatus, file=open(Full_NotFound_Report, "a"))
@@ -465,8 +464,8 @@ def apsouth1():
                 print(bucket+', '+KMS_Key+', '+key_type+', '+bucketKeyStatus, file=open(bucketEncryptionReport, "a"))
             except is_client_error('AccessDeniedException'):
                 #print(bucket+', AccessDenied, AccessDenied, '+bucketKeyStatus)
-                print(bucket+', AccessDenied, AccessDenied, '+bucketKeyStatus, file=open(Full_NotFound_Report, "a"))
-                print(bucket+', AccessDenied, AccessDenied, '+bucketKeyStatus, file=open(bucketEncryptionReport, "a"))
+                print(bucket+', Cross-Account KMS Key, AccessDenied, '+bucketKeyStatus, file=open(Full_NotFound_Report, "a"))
+                print(bucket+', Cross-Account KMS Key, AccessDenied, '+bucketKeyStatus, file=open(bucketEncryptionReport, "a"))
             except is_client_error('NotFoundException'):
                 #print(bucket+', '+KMS_Key+', '+bucketKeyStatus)
                 print(bucket+', '+KMS_Key+', N/A, '+bucketKeyStatus, file=open(Full_NotFound_Report, "a"))
@@ -495,8 +494,8 @@ def apsouth2():
                 print(bucket+', '+KMS_Key+', '+key_type+', '+bucketKeyStatus, file=open(bucketEncryptionReport, "a"))
             except is_client_error('AccessDeniedException'):
                 #print(bucket+', AccessDenied, AccessDenied, '+bucketKeyStatus)
-                print(bucket+', AccessDenied, AccessDenied, '+bucketKeyStatus, file=open(Full_NotFound_Report, "a"))
-                print(bucket+', AccessDenied, AccessDenied, '+bucketKeyStatus, file=open(bucketEncryptionReport, "a"))
+                print(bucket+', Cross-Account KMS Key, AccessDenied, '+bucketKeyStatus, file=open(Full_NotFound_Report, "a"))
+                print(bucket+', Cross-Account KMS Key, AccessDenied, '+bucketKeyStatus, file=open(bucketEncryptionReport, "a"))
             except is_client_error('NotFoundException'):
                 #print(bucket+', '+KMS_Key+', '+bucketKeyStatus)
                 print(bucket+', '+KMS_Key+', N/A, '+bucketKeyStatus, file=open(Full_NotFound_Report, "a"))
@@ -526,8 +525,8 @@ def apnortheast1():
                 print(bucket+', '+KMS_Key+', '+key_type+', '+bucketKeyStatus, file=open(bucketEncryptionReport, "a"))
             except is_client_error('AccessDeniedException'):
                 #print(bucket+', AccessDenied, AccessDenied, '+bucketKeyStatus)
-                print(bucket+', AccessDenied, AccessDenied, '+bucketKeyStatus, file=open(Full_NotFound_Report, "a"))
-                print(bucket+', AccessDenied, AccessDenied, '+bucketKeyStatus, file=open(bucketEncryptionReport, "a"))
+                print(bucket+', Cross-Account KMS Key, AccessDenied, '+bucketKeyStatus, file=open(Full_NotFound_Report, "a"))
+                print(bucket+', Cross-Account KMS Key, AccessDenied, '+bucketKeyStatus, file=open(bucketEncryptionReport, "a"))
             except is_client_error('NotFoundException'):
                 #print(bucket+', '+KMS_Key+', '+bucketKeyStatus)
                 print(bucket+', '+KMS_Key+', N/A, '+bucketKeyStatus, file=open(Full_NotFound_Report, "a"))
@@ -556,8 +555,8 @@ def apnortheast2():
                 print(bucket+', '+KMS_Key+', '+key_type+', '+bucketKeyStatus, file=open(bucketEncryptionReport, "a"))
             except is_client_error('AccessDeniedException'):
                 #print(bucket+', AccessDenied, AccessDenied, '+bucketKeyStatus)
-                print(bucket+', AccessDenied, AccessDenied, '+bucketKeyStatus, file=open(Full_NotFound_Report, "a"))
-                print(bucket+', AccessDenied, AccessDenied, '+bucketKeyStatus, file=open(bucketEncryptionReport, "a"))
+                print(bucket+', Cross-Account KMS Key, AccessDenied, '+bucketKeyStatus, file=open(Full_NotFound_Report, "a"))
+                print(bucket+', Cross-Account KMS Key, AccessDenied, '+bucketKeyStatus, file=open(bucketEncryptionReport, "a"))
             except is_client_error('NotFoundException'):
                 #print(bucket+', '+KMS_Key+', '+bucketKeyStatus)
                 print(bucket+', '+KMS_Key+', N/A, '+bucketKeyStatus, file=open(Full_NotFound_Report, "a"))
@@ -586,8 +585,8 @@ def apnortheast3():
                 print(bucket+', '+KMS_Key+', '+key_type+', '+bucketKeyStatus, file=open(bucketEncryptionReport, "a"))
             except is_client_error('AccessDeniedException'):
                 #print(bucket+', AccessDenied, AccessDenied, '+bucketKeyStatus)
-                print(bucket+', AccessDenied, AccessDenied, '+bucketKeyStatus, file=open(Full_NotFound_Report, "a"))
-                print(bucket+', AccessDenied, AccessDenied, '+bucketKeyStatus, file=open(bucketEncryptionReport, "a"))
+                print(bucket+', Cross-Account KMS Key, AccessDenied, '+bucketKeyStatus, file=open(Full_NotFound_Report, "a"))
+                print(bucket+', Cross-Account KMS Key, AccessDenied, '+bucketKeyStatus, file=open(bucketEncryptionReport, "a"))
             except is_client_error('NotFoundException'):
                 #print(bucket+', '+KMS_Key+', '+bucketKeyStatus)
                 print(bucket+', '+KMS_Key+', N/A, '+bucketKeyStatus, file=open(Full_NotFound_Report, "a"))
@@ -616,8 +615,8 @@ def apsoutheast1():
                 print(bucket+', '+KMS_Key+', '+key_type+', '+bucketKeyStatus, file=open(bucketEncryptionReport, "a"))
             except is_client_error('AccessDeniedException'):
                 #print(bucket+', AccessDenied, AccessDenied, '+bucketKeyStatus)
-                print(bucket+', AccessDenied, AccessDenied, '+bucketKeyStatus, file=open(Full_NotFound_Report, "a"))
-                print(bucket+', AccessDenied, AccessDenied, '+bucketKeyStatus, file=open(bucketEncryptionReport, "a"))
+                print(bucket+', Cross-Account KMS Key, AccessDenied, '+bucketKeyStatus, file=open(Full_NotFound_Report, "a"))
+                print(bucket+', Cross-Account KMS Key, AccessDenied, '+bucketKeyStatus, file=open(bucketEncryptionReport, "a"))
             except is_client_error('NotFoundException'):
                 #print(bucket+', '+KMS_Key+', '+bucketKeyStatus)
                 print(bucket+', '+KMS_Key+', N/A, '+bucketKeyStatus, file=open(Full_NotFound_Report, "a"))
@@ -646,8 +645,8 @@ def apsoutheast2():
                 print(bucket+', '+KMS_Key+', '+key_type+', '+bucketKeyStatus, file=open(bucketEncryptionReport, "a"))
             except is_client_error('AccessDeniedException'):
                 #print(bucket+', AccessDenied, AccessDenied, '+bucketKeyStatus)
-                print(bucket+', AccessDenied, AccessDenied, '+bucketKeyStatus, file=open(Full_NotFound_Report, "a"))
-                print(bucket+', AccessDenied, AccessDenied, '+bucketKeyStatus, file=open(bucketEncryptionReport, "a"))
+                print(bucket+', Cross-Account KMS Key, AccessDenied, '+bucketKeyStatus, file=open(Full_NotFound_Report, "a"))
+                print(bucket+', Cross-Account KMS Key, AccessDenied, '+bucketKeyStatus, file=open(bucketEncryptionReport, "a"))
             except is_client_error('NotFoundException'):
                 #print(bucket+', '+KMS_Key+', '+bucketKeyStatus)
                 print(bucket+', '+KMS_Key+', N/A, '+bucketKeyStatus, file=open(Full_NotFound_Report, "a"))
@@ -675,8 +674,8 @@ def cacentral1():
                 print(bucket+', '+KMS_Key+', '+key_type+', '+bucketKeyStatus, file=open(bucketEncryptionReport, "a"))
             except is_client_error('AccessDeniedException'):
                 #print(bucket+', AccessDenied, AccessDenied, '+bucketKeyStatus)
-                print(bucket+', AccessDenied, AccessDenied, '+bucketKeyStatus, file=open(Full_NotFound_Report, "a"))
-                print(bucket+', AccessDenied, AccessDenied, '+bucketKeyStatus, file=open(bucketEncryptionReport, "a"))
+                print(bucket+', Cross-Account KMS Key, AccessDenied, '+bucketKeyStatus, file=open(Full_NotFound_Report, "a"))
+                print(bucket+', Cross-Account KMS Key, AccessDenied, '+bucketKeyStatus, file=open(bucketEncryptionReport, "a"))
             except is_client_error('NotFoundException'):
                 #print(bucket+', '+KMS_Key+', '+bucketKeyStatus)
                 print(bucket+', '+KMS_Key+', N/A, '+bucketKeyStatus, file=open(Full_NotFound_Report, "a"))
@@ -705,8 +704,8 @@ def cnnorth1():
                 print(bucket+', '+KMS_Key+', '+key_type+', '+bucketKeyStatus, file=open(bucketEncryptionReport, "a"))
             except is_client_error('AccessDeniedException'):
                 #print(bucket+', AccessDenied, AccessDenied, '+bucketKeyStatus)
-                print(bucket+', AccessDenied, AccessDenied, '+bucketKeyStatus, file=open(Full_NotFound_Report, "a"))
-                print(bucket+', AccessDenied, AccessDenied, '+bucketKeyStatus, file=open(bucketEncryptionReport, "a"))
+                print(bucket+', Cross-Account KMS Key, AccessDenied, '+bucketKeyStatus, file=open(Full_NotFound_Report, "a"))
+                print(bucket+', Cross-Account KMS Key, AccessDenied, '+bucketKeyStatus, file=open(bucketEncryptionReport, "a"))
             except is_client_error('NotFoundException'):
                 #print(bucket+', '+KMS_Key+', '+bucketKeyStatus)
                 print(bucket+', '+KMS_Key+', N/A, '+bucketKeyStatus, file=open(Full_NotFound_Report, "a"))
@@ -734,8 +733,8 @@ def cnnorthwest1():
                 print(bucket+', '+KMS_Key+', '+key_type+', '+bucketKeyStatus, file=open(bucketEncryptionReport, "a"))
             except is_client_error('AccessDeniedException'):
                 #print(bucket+', AccessDenied, AccessDenied, '+bucketKeyStatus)
-                print(bucket+', AccessDenied, AccessDenied, '+bucketKeyStatus, file=open(Full_NotFound_Report, "a"))
-                print(bucket+', AccessDenied, AccessDenied, '+bucketKeyStatus, file=open(bucketEncryptionReport, "a"))
+                print(bucket+', Cross-Account KMS Key, AccessDenied, '+bucketKeyStatus, file=open(Full_NotFound_Report, "a"))
+                print(bucket+', Cross-Account KMS Key, AccessDenied, '+bucketKeyStatus, file=open(bucketEncryptionReport, "a"))
             except is_client_error('NotFoundException'):
                 #print(bucket+', '+KMS_Key+', '+bucketKeyStatus)
                 print(bucket+', '+KMS_Key+', N/A, '+bucketKeyStatus, file=open(Full_NotFound_Report, "a"))
@@ -764,8 +763,8 @@ def eucentral1():
                 print(bucket+', '+KMS_Key+', '+key_type+', '+bucketKeyStatus, file=open(bucketEncryptionReport, "a"))
             except is_client_error('AccessDeniedException'):
                 #print(bucket+', AccessDenied, AccessDenied, '+bucketKeyStatus)
-                print(bucket+', AccessDenied, AccessDenied, '+bucketKeyStatus, file=open(Full_NotFound_Report, "a"))
-                print(bucket+', AccessDenied, AccessDenied, '+bucketKeyStatus, file=open(bucketEncryptionReport, "a"))
+                print(bucket+', Cross-Account KMS Key, AccessDenied, '+bucketKeyStatus, file=open(Full_NotFound_Report, "a"))
+                print(bucket+', Cross-Account KMS Key, AccessDenied, '+bucketKeyStatus, file=open(bucketEncryptionReport, "a"))
             except is_client_error('NotFoundException'):
                 #print(bucket+', '+KMS_Key+', '+bucketKeyStatus)
                 print(bucket+', '+KMS_Key+', N/A, '+bucketKeyStatus, file=open(Full_NotFound_Report, "a"))
@@ -794,8 +793,8 @@ def eucentral2():
                 print(bucket+', '+KMS_Key+', '+key_type+', '+bucketKeyStatus, file=open(bucketEncryptionReport, "a"))
             except is_client_error('AccessDeniedException'):
                 #print(bucket+', AccessDenied, AccessDenied, '+bucketKeyStatus)
-                print(bucket+', AccessDenied, AccessDenied, '+bucketKeyStatus, file=open(Full_NotFound_Report, "a"))
-                print(bucket+', AccessDenied, AccessDenied, '+bucketKeyStatus, file=open(bucketEncryptionReport, "a"))
+                print(bucket+', Cross-Account KMS Key, AccessDenied, '+bucketKeyStatus, file=open(Full_NotFound_Report, "a"))
+                print(bucket+', Cross-Account KMS Key, AccessDenied, '+bucketKeyStatus, file=open(bucketEncryptionReport, "a"))
             except is_client_error('NotFoundException'):
                 #print(bucket+', '+KMS_Key+', '+bucketKeyStatus)
                 print(bucket+', '+KMS_Key+', N/A, '+bucketKeyStatus, file=open(Full_NotFound_Report, "a"))
@@ -824,8 +823,8 @@ def euwest1():
                 print(bucket+', '+KMS_Key+', '+key_type+', '+bucketKeyStatus, file=open(bucketEncryptionReport, "a"))
             except is_client_error('AccessDeniedException'):
                 #print(bucket+', AccessDenied, AccessDenied, '+bucketKeyStatus)
-                print(bucket+', AccessDenied, AccessDenied, '+bucketKeyStatus, file=open(Full_NotFound_Report, "a"))
-                print(bucket+', AccessDenied, AccessDenied, '+bucketKeyStatus, file=open(bucketEncryptionReport, "a"))
+                print(bucket+', Cross-Account KMS Key, AccessDenied, '+bucketKeyStatus, file=open(Full_NotFound_Report, "a"))
+                print(bucket+', Cross-Account KMS Key, AccessDenied, '+bucketKeyStatus, file=open(bucketEncryptionReport, "a"))
             except is_client_error('NotFoundException'):
                 #print(bucket+', '+KMS_Key+', '+bucketKeyStatus)
                 print(bucket+', '+KMS_Key+', N/A, '+bucketKeyStatus, file=open(Full_NotFound_Report, "a"))
@@ -854,8 +853,8 @@ def euwest2():
                 print(bucket+', '+KMS_Key+', '+key_type+', '+bucketKeyStatus, file=open(bucketEncryptionReport, "a"))
             except is_client_error('AccessDeniedException'):
                 #print(bucket+', AccessDenied, AccessDenied, '+bucketKeyStatus)
-                print(bucket+', AccessDenied, AccessDenied, '+bucketKeyStatus, file=open(Full_NotFound_Report, "a"))
-                print(bucket+', AccessDenied, AccessDenied, '+bucketKeyStatus, file=open(bucketEncryptionReport, "a"))
+                print(bucket+', Cross-Account KMS Key, AccessDenied, '+bucketKeyStatus, file=open(Full_NotFound_Report, "a"))
+                print(bucket+', Cross-Account KMS Key, AccessDenied, '+bucketKeyStatus, file=open(bucketEncryptionReport, "a"))
             except is_client_error('NotFoundException'):
                 #print(bucket+', '+KMS_Key+', '+bucketKeyStatus)
                 print(bucket+', '+KMS_Key+', N/A, '+bucketKeyStatus, file=open(Full_NotFound_Report, "a"))
@@ -884,8 +883,8 @@ def euwest3():
                 print(bucket+', '+KMS_Key+', '+key_type+', '+bucketKeyStatus, file=open(bucketEncryptionReport, "a"))
             except is_client_error('AccessDeniedException'):
                 #print(bucket+', AccessDenied, AccessDenied, '+bucketKeyStatus)
-                print(bucket+', AccessDenied, AccessDenied, '+bucketKeyStatus, file=open(Full_NotFound_Report, "a"))
-                print(bucket+', AccessDenied, AccessDenied, '+bucketKeyStatus, file=open(bucketEncryptionReport, "a"))
+                print(bucket+', Cross-Account KMS Key, AccessDenied, '+bucketKeyStatus, file=open(Full_NotFound_Report, "a"))
+                print(bucket+', Cross-Account KMS Key, AccessDenied, '+bucketKeyStatus, file=open(bucketEncryptionReport, "a"))
             except is_client_error('NotFoundException'):
                 #print(bucket+', '+KMS_Key+', '+bucketKeyStatus)
                 print(bucket+', '+KMS_Key+', N/A, '+bucketKeyStatus, file=open(Full_NotFound_Report, "a"))
@@ -914,8 +913,8 @@ def eusouth1():
                 print(bucket+', '+KMS_Key+', '+key_type+', '+bucketKeyStatus, file=open(bucketEncryptionReport, "a"))
             except is_client_error('AccessDeniedException'):
                 #print(bucket+', AccessDenied, AccessDenied, '+bucketKeyStatus)
-                print(bucket+', AccessDenied, AccessDenied, '+bucketKeyStatus, file=open(Full_NotFound_Report, "a"))
-                print(bucket+', AccessDenied, AccessDenied, '+bucketKeyStatus, file=open(bucketEncryptionReport, "a"))
+                print(bucket+', Cross-Account KMS Key, AccessDenied, '+bucketKeyStatus, file=open(Full_NotFound_Report, "a"))
+                print(bucket+', Cross-Account KMS Key, AccessDenied, '+bucketKeyStatus, file=open(bucketEncryptionReport, "a"))
             except is_client_error('NotFoundException'):
                 #print(bucket+', '+KMS_Key+', '+bucketKeyStatus)
                 print(bucket+', '+KMS_Key+', N/A, '+bucketKeyStatus, file=open(Full_NotFound_Report, "a"))
@@ -943,8 +942,8 @@ def eusouth2():
                 print(bucket+', '+KMS_Key+', '+key_type+', '+bucketKeyStatus, file=open(bucketEncryptionReport, "a"))
             except is_client_error('AccessDeniedException'):
                 #print(bucket+', AccessDenied, AccessDenied, '+bucketKeyStatus)
-                print(bucket+', AccessDenied, AccessDenied, '+bucketKeyStatus, file=open(Full_NotFound_Report, "a"))
-                print(bucket+', AccessDenied, AccessDenied, '+bucketKeyStatus, file=open(bucketEncryptionReport, "a"))
+                print(bucket+', Cross-Account KMS Key, AccessDenied, '+bucketKeyStatus, file=open(Full_NotFound_Report, "a"))
+                print(bucket+', Cross-Account KMS Key, AccessDenied, '+bucketKeyStatus, file=open(bucketEncryptionReport, "a"))
             except is_client_error('NotFoundException'):
                 #print(bucket+', '+KMS_Key+', '+bucketKeyStatus)
                 print(bucket+', '+KMS_Key+', N/A, '+bucketKeyStatus, file=open(Full_NotFound_Report, "a"))
@@ -973,8 +972,8 @@ def eunorth1():
                 print(bucket+', '+KMS_Key+', '+key_type+', '+bucketKeyStatus, file=open(bucketEncryptionReport, "a"))
             except is_client_error('AccessDeniedException'):
                 #print(bucket+', AccessDenied, AccessDenied, '+bucketKeyStatus)
-                print(bucket+', AccessDenied, AccessDenied, '+bucketKeyStatus, file=open(Full_NotFound_Report, "a"))
-                print(bucket+', AccessDenied, AccessDenied, '+bucketKeyStatus, file=open(bucketEncryptionReport, "a"))
+                print(bucket+', Cross-Account KMS Key, AccessDenied, '+bucketKeyStatus, file=open(Full_NotFound_Report, "a"))
+                print(bucket+', Cross-Account KMS Key, AccessDenied, '+bucketKeyStatus, file=open(bucketEncryptionReport, "a"))
             except is_client_error('NotFoundException'):
                 #print(bucket+', '+KMS_Key+', '+bucketKeyStatus)
                 print(bucket+', '+KMS_Key+', N/A, '+bucketKeyStatus, file=open(Full_NotFound_Report, "a"))
@@ -1003,8 +1002,8 @@ def mesouth1():
                 print(bucket+', '+KMS_Key+', '+key_type+', '+bucketKeyStatus, file=open(bucketEncryptionReport, "a"))
             except is_client_error('AccessDeniedException'):
                 #print(bucket+', AccessDenied, AccessDenied, '+bucketKeyStatus)
-                print(bucket+', AccessDenied, AccessDenied, '+bucketKeyStatus, file=open(Full_NotFound_Report, "a"))
-                print(bucket+', AccessDenied, AccessDenied, '+bucketKeyStatus, file=open(bucketEncryptionReport, "a"))
+                print(bucket+', Cross-Account KMS Key, AccessDenied, '+bucketKeyStatus, file=open(Full_NotFound_Report, "a"))
+                print(bucket+', Cross-Account KMS Key, AccessDenied, '+bucketKeyStatus, file=open(bucketEncryptionReport, "a"))
             except is_client_error('NotFoundException'):
                 #print(bucket+', '+KMS_Key+', '+bucketKeyStatus)
                 print(bucket+', '+KMS_Key+', N/A, '+bucketKeyStatus, file=open(Full_NotFound_Report, "a"))
@@ -1033,8 +1032,8 @@ def mecentral1():
                 print(bucket+', '+KMS_Key+', '+key_type+', '+bucketKeyStatus, file=open(bucketEncryptionReport, "a"))
             except is_client_error('AccessDeniedException'):
                 #print(bucket+', AccessDenied, AccessDenied, '+bucketKeyStatus)
-                print(bucket+', AccessDenied, AccessDenied, '+bucketKeyStatus, file=open(Full_NotFound_Report, "a"))
-                print(bucket+', AccessDenied, AccessDenied, '+bucketKeyStatus, file=open(bucketEncryptionReport, "a"))
+                print(bucket+', Cross-Account KMS Key, AccessDenied, '+bucketKeyStatus, file=open(Full_NotFound_Report, "a"))
+                print(bucket+', Cross-Account KMS Key, AccessDenied, '+bucketKeyStatus, file=open(bucketEncryptionReport, "a"))
             except is_client_error('NotFoundException'):
                 #print(bucket+', '+KMS_Key+', '+bucketKeyStatus)
                 print(bucket+', '+KMS_Key+', N/A, '+bucketKeyStatus, file=open(Full_NotFound_Report, "a"))
@@ -1063,12 +1062,16 @@ def saeast1():
                 print(bucket+', '+KMS_Key+', '+key_type+', '+bucketKeyStatus, file=open(bucketEncryptionReport, "a"))
             except is_client_error('AccessDeniedException'):
                 #print(bucket+', AccessDenied, AccessDenied, '+bucketKeyStatus)
-                print(bucket+', AccessDenied, AccessDenied, '+bucketKeyStatus, file=open(Full_NotFound_Report, "a"))
-                print(bucket+', AccessDenied, AccessDenied, '+bucketKeyStatus, file=open(bucketEncryptionReport, "a"))
+                print(bucket+', Cross-Account KMS Key, AccessDenied, '+bucketKeyStatus, file=open(Full_NotFound_Report, "a"))
+                print(bucket+', Cross-Account KMS Key, AccessDenied, '+bucketKeyStatus, file=open(bucketEncryptionReport, "a"))
             except is_client_error('NotFoundException'):
                 #print(bucket+', '+KMS_Key+', '+bucketKeyStatus)
                 print(bucket+', '+KMS_Key+', N/A, '+bucketKeyStatus, file=open(Full_NotFound_Report, "a"))
                 print(bucket+', '+KMS_Key+', N/A, '+bucketKeyStatus, file=open(bucketEncryptionReport, "a"))
+
+
+
+
 
 
 
@@ -1134,3 +1137,5 @@ os.remove(key_ids_eun1)
 os.remove(key_ids_mes1)
 os.remove(key_ids_mec1)
 os.remove(key_ids_sae1)
+os.remove(KMS_Output)
+os.remove(Full_NotFound_Report)
