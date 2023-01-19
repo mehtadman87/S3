@@ -9,7 +9,7 @@ from re import search
 
 
 # Define the report output location
-bucketEncryptionReport = 'C:/users/neilmeht/Desktop/bucketEncryptionReport_'+time.strftime("%Y%m%d-%H%M%S")+'.csv'
+bucketEncryptionReport = 'C:/Outputs/bucketEncryptionReport_'+time.strftime("%Y%m%d-%H%M%S")+'.csv'
 
 
 # Create function to handle client errors (4xx errors).
